@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="index">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 ">
+                <h3> Create a new Player Profile </h3>
+        <form action="/players" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="from-label">Name</label>
+                <input type="text" name="player[name]" class="form-control" required />
+                <div class="valid-feedback">Name looks GOOD! </div>
+                <div class="invalid-feedback">please add a valid Name </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="scholarID" class="from-label">ScholarID</label>
+                    <input  name="player[scholarID]" class="form-control" required />
+                    <div class="invalid-feedback">please enter a valid scholarID</div>
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="branch" class="from-label">Branch</label>
+                    <input type="text" name="player[branch]" class="form-control" required />
+                    <div class="invalid-feedback">please add a valid branch </div>
+                </div>
+    
+            <div class="mb-3">
+                <label for="imageUrl" class="from-label">Upload Player Image</label>
+                <input type="file" name="image" class="form-control" >
+                <div class="invalid-feedback">please add a valid Player image </div>
+            </div>
+            <div class="mb-3">
+                <!-- 'rider', 'rightCorner', 'leftCorner','rightCover','leftCover','rightIn','leftIn','AllRounder' -->
+            <select class="form-select form-select-sm mb-3"name="player[position]" id="category" aria-label="Large select example">
+                <option selected  >Select your Position</option>
+                <option value="rider">Rider</option>
+                <option value="rightCorner">RightCorner</option>
+                <option value="rightCover">RightCover</option>
+                <option value="leftCorner">LeftCorner</option>
+                <option value="leftCover">LeftCover</option>
+                <option value="AllRounder">All Rounder</option>
+                </select>
+                
+                <select class="form-select form-select-sm mb-3"name="player[size]" id="category" aria-label="Large select example">
+                    <option selected  >select your T Shirt Size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    </select>
+
+                    <label for="jerseyName" class="from-label">Jersey Name</label>
+                    <input type="text" name="player[jerseyName]" class="form-control" required />
+                    <div class="invalid-feedback">please add a valid Name for your Jersey </div>
+            
+                    <div class="text-center">
+                        <button  type="submit" class="btn btn-dark col-12 col-md-12 edit-btn mt-3">ADD</button>
+                    </div>
+            
+        </form>
+            </div>
+        </div>
+    
+    </div>
+    
+</body>
