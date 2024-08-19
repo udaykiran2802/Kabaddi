@@ -11,7 +11,7 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
-      folder: 'VolleyBall_DEV',
+      folder: 'Kabaddi_DEV',
       allowedformats:["png", "jpeg","jpg"], 
     },
   });

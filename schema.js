@@ -34,6 +34,7 @@ module.exports.playerSchema = Joi.object({
 
     position: Joi.string().valid('rider', 'rightCorner', 'leftCorner','rightCover','leftCover','rightIn','leftIn','AllRounder').required(),
     size: Joi.string().valid("XS", "S", "M","L","XL").required(),
+    jerseyName: Joi.string().required,
     branch: Joi.string().required()
      
     }).required()
